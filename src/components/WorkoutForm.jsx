@@ -1,43 +1,41 @@
 // src/components/WorkoutForm.js
 import React, { useState } from "react";
-import { addWorkout } from "../services/workoutService";
 
 function WorkoutForm({ onAdd }) {
-  const [type, setType] = useState("");
-  const [duration, setDuration] = useState("");
+  const [name, setName] = useState("");
   const [calories, setCalories] = useState("");
+  const [date, setDate] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const workout = { type, duration, calories };
-    addWorkout(workout);
-    onAdd(workout);
-    setType("");
-    setDuration("");
-    setCalories("");
+    if (name.trim() && calories.trim() && date.trim()) {
+      onAdd({ name, calories: Number(calories), date });
+      setName("");
+      setCalories("");
+      setDate("");
+    }
   };
 
   return (
     <form onSubmit={handleSubmit}>
       <input
         type="text"
-        placeholder="Type"
-        value={type}
-        onChange={(e) => setType(e.target.value)}
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+        placeholder="Workout Name"
         required
       />
       <input
         type="number"
-        placeholder="Duration (min)"
-        value={duration}
-        onChange={(e) => setDuration(e.target.value)}
-        required
-      />
-      <input
-        type="number"
-        placeholder="Calories"
         value={calories}
         onChange={(e) => setCalories(e.target.value)}
+        placeholder="Calories Burned"
+        required
+      />
+      <input
+        type="date"
+        value={date}
+        onChange={(e) => setDate(e.target.value)}
         required
       />
       <button type="submit">Add Workout</button>
