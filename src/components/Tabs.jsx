@@ -3,7 +3,7 @@ import React from "react";
 
 function Tabs({ currentView, onChangeView }) {
   return (
-    <div>
+    <div className="tabs">
       <button
         onClick={() => onChangeView("daily")}
         className={currentView === "daily" ? "active" : ""}

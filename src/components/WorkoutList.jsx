@@ -3,7 +3,7 @@ import React from "react";
 
 function WorkoutList({ workouts, onRemove }) {
   return (
-    <ul>
+    <ul className="workout-list">
       {workouts.map((workout, index) => (
         <li key={index}>
           {workout.name} - {workout.calories} calories on{" "}

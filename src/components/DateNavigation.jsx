@@ -29,7 +29,7 @@ function DateNavigation({ currentDate, onNavigate }) {
   };
 
   return (
-    <div>
+    <div className="date-navigation">
       <button onClick={() => onNavigate(-1)}>Previous</button>
       <span>{formatDate(currentDate)}</span>
       <button onClick={() => onNavigate(1)}>Next</button>
