@@ -1,13 +1,13 @@
 // src/components/WorkoutList.js
 import React from "react";
-// import { removeWorkout } from "../services/workoutService";
 
 function WorkoutList({ workouts, onRemove }) {
   return (
-    <ul>
+    <ul className="workout-list">
       {workouts.map((workout, index) => (
         <li key={index}>
-          {workout.type} - {workout.duration} mins - {workout.calories} calories
+          {workout.name} - {workout.calories} calories on{" "}
+          {new Date(workout.date).toLocaleDateString()}
           <button onClick={() => onRemove(index)}>Remove</button>
         </li>
       ))}

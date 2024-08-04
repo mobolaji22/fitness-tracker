@@ -3,7 +3,7 @@ import React from "react";
 
 function GoalList({ goals, onRemove }) {
   return (
-    <ul>
+    <ul className="goal-list">
       {goals.map((goal, index) => (
         <li key={index}>
           {goal}

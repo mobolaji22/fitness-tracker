@@ -19,7 +19,8 @@ function Login() {
   };
 
   return (
-    <div>
+    <div className="auth-container">
+      <h1>Login</h1>
       <form onSubmit={handleSubmit}>
         <input
           type="text"

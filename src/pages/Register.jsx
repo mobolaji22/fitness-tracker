@@ -22,7 +22,8 @@ function Register() {
   };
 
   return (
-    <div>
+    <div className="auth-container">
+      <h1>Register</h1>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
