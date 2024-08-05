@@ -61,13 +61,16 @@ body {
 
 .date-navigation {
   display: flex;
+  align-items: center;
   justify-content: center;
+  gap: 0.5em;
   margin-bottom: 20px;
 }
 
 .date-navigation button {
   padding: 10px;
   border: none;
+  border-radius: 0.25em;
   background-color: #007bff;
   color: white;
   cursor: pointer;
@@ -78,7 +81,7 @@ body {
 }
 
 .dashboard {
-  padding: 20px;
+  padding: 0 20px 20px;
 }
 
 .workout-form,
@@ -102,7 +105,9 @@ body {
 }
 
 .workout-list button,
-.goal-list button {
+.goal-list button,
+.workout-form button,
+.goal-form button {
   background-color: #dc3545;
   color: white;
   border: none;
@@ -111,6 +116,8 @@ body {
 }
 
 .workout-list button:hover,
-.goal-list button:hover {
+.goal-list button:hover,
+.workout-form button:hover,
+.goal-form button:hover {
   background-color: #c82333;
 }

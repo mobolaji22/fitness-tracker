@@ -17,29 +17,31 @@ function WorkoutForm({ onAdd }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        placeholder="Workout Name"
-        required
-      />
-      <input
-        type="number"
-        value={calories}
-        onChange={(e) => setCalories(e.target.value)}
-        placeholder="Calories Burned"
-        required
-      />
-      <input
-        type="date"
-        value={date}
-        onChange={(e) => setDate(e.target.value)}
-        required
-      />
-      <button type="submit">Add Workout</button>
-    </form>
+    <div className="workout-form">
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          placeholder="Workout Name"
+          required
+        />
+        <input
+          type="number"
+          value={calories}
+          onChange={(e) => setCalories(e.target.value)}
+          placeholder="Calories Burned"
+          required
+        />
+        <input
+          type="date"
+          value={date}
+          onChange={(e) => setDate(e.target.value)}
+          required
+        />
+        <button type="submit">Add Workout</button>
+      </form>
+    </div>
   );
 }
 

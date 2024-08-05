@@ -13,16 +13,18 @@ function GoalForm({ onAdd }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        value={goal}
-        onChange={(e) => setGoal(e.target.value)}
-        placeholder="New goal"
-        required
-      />
-      <button type="submit">Add Goal</button>
-    </form>
+    <div className="goal-form">
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          value={goal}
+          onChange={(e) => setGoal(e.target.value)}
+          placeholder="New goal"
+          required
+        />
+        <button type="submit">Add Goal</button>
+      </form>
+    </div>
   );
 }
 
